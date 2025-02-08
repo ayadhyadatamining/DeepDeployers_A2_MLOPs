@@ -1,5 +1,74 @@
 # DeepDeployers_A2_MLOPs
 
+**Sentiment Analysis Solution for Movie Reviews**
+We'll implement two approaches (TF-IDF + Classifier and BERT) using Stanford's IMDB dataset1, then create a production-ready API system. The solution includes model development, API integration, and team workflow management.
+
+System Architecture
+
+text
+graph TD
+    A[User Interface] --> B(REST API)
+    B --> C{Model Type}
+    C --> D[TF-IDF + Classifier]
+    C --> E[Fine-tuned BERT]
+    B --> F[Database]
+    F --> G[Model Parameters]
+    F --> H[Training Logs]
+
+Member 1-Arup Das : Data & Model Development
+Dataset preprocessing and cleaning
+Implement TF-IDF + classifier pipeline
+BERT model fine-tuning
+Model evaluation metrics
+
+Member 2-Abhishek Prasad Nonia: API & Infrastructure
+Design REST API endpoints
+Implement request/response handling
+Database integration for model parameters
+Authentication system setup
+
+Member 3-Piyush Sudhir Shobhane: Deployment & Testing
+Docker containerization
+CI/CD pipeline setup
+Unit/Integration testing
+Performance benchmarking
+
+GitHub Collaboration Strategy
+Branch Management
+
+bash
+main         - Production-ready code
+development  - Stable development branch
+feature/*    - Individual task branches
+Equal Commit Distribution
+Create issues for all subtasks
+Use GitHub Projects for task tracking
+Implement pair programming sessions for complex features
+Follow the atomic commit strategy:
+Small, focused commits
+Conventional commit messages
+Daily sync commits
+Recommended Workflow
+
+text
+graph LR
+    A[Create Issue] --> B[Assign to Member]
+    B --> C[Create Feature Branch]
+    C --> D[Develop & Commit]
+    D --> E[Create PR]
+    E --> F[Peer Review]
+    F --> G[Merge to Development]
+Key Considerations
+Use model versioning (MLflow/DVC)
+Implement API rate limiting
+Set up automated testing (PyTest)
+Use distributed training for BERT
+Monitor model performance drift
+This solution combines state-of-the-art NLP techniques with production-grade API design, following best practices for team collaboration1. The modular architecture allows easy swapping of model components while maintaining API consistency.
+
+
+Problem Statement - Assignment 2
+
 Submission Deadline - 26th Feb 2025	
 	
 ML model to develop	Dataset
