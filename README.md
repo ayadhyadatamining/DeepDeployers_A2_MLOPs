@@ -1,4 +1,4 @@
-# ayadhyadatamining-DeepDeployers_A2_MLOPs
+# DeepDeployers_A2_MLOPs
 
 Submission Deadline - 26th Feb 2025	
 	
