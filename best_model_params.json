@@ -1,0 +1,33 @@
+{
+    "model_details": {
+        "model_name": "facebook/bart-large",
+        "num_labels": 2,
+        "tokenizer_name": "facebook/bart-large",
+        "max_sequence_length": 512
+    },
+    "training_hyperparameters": {
+        "learning_rate": 5e-05,
+        "batch_size_train": 8,
+        "batch_size_eval": 8,
+        "num_train_epochs": 3,
+        "weight_decay": 0.01,
+        "gradient_accumulation_steps": 2,
+        "warmup_steps": 500,
+        "adam_epsilon": 1e-08,
+        "logging_steps": 10,
+        "evaluation_strategy": "epoch",
+        "save_strategy": "epoch",
+        "fp16": true,
+        "save_total_limit": 2
+    },
+    "hardware_details": {
+        "device": "cuda",
+        "num_gpus": 1,
+        "gpu_name": "NVIDIA GeForce RTX 2060"
+    },
+    "dataset_details": {
+        "train_size": 0.8,
+        "val_size": 0.2,
+        "total_samples": 10000
+    }
+}
