@@ -1,0 +1,12 @@
+pandas
+mlflow
+fastapi[standard]
+uvicorn
+torch
+transformers
+pandas
+datasets
+scikit-learn
+jinja2
+python-multipart
+pydantic

@@ -1,0 +1,72 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+Research
+Research/
+mlruns/
+# Distribution / packaging
+.Python
+build/
+dist/
+sdist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# PyInstaller
+**/__pyinstaller_spec__.py
+**/_MEIPASS*
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+*/junit.xml
+result.xml
+pytest.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Log files
+*.log
+
+# OS or Editor artifacts
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Node Modules (if you have frontend code in the same repo)
+node_modules/
+
+# Docker related (Optional, but good practice)
+Dockerfile
+docker-compose.yml
+
+#Large data files
+data/
+models/
+
+#Excluding training data
+
+#Other
+*.zip
+*.tar.gz
+*.swp
+tmp/
+temp/
