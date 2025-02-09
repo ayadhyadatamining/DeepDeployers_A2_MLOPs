@@ -8,6 +8,12 @@ This project is a sentiment analysis system built using FastAPI, a fine-tuned BA
 
 ---
 
+## 🎥 Project Demonstration
+
+Watch the project demonstration video here:  
+[![Project Demonstration](https://img.shields.io/badge/Project%20Demo-Click%20Here-blue?style=for-the-badge)](https://drive.google.com/file/d/13A20RC270TYE0mmHpBlIXURGJ_JmIYtH/view?usp=sharing)
+
+
 ## 📂 Project Structure
 
 ```bash
