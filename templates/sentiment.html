@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="/static/sentiment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="/static/chat_updated.mp4" type="video/mp4"> <!-- Replace with your video file -->
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+
+        <div class="review-input">
+            <label for="reviewText">Enter Review:</label>
+            <textarea id="reviewText" rows="4" cols="50" placeholder="Write your review here..."></textarea>
+            <button onclick="analyzeReview()">Analyze</button>
+        </div>
+    </div>
+
+    <!-- Modal for displaying the result -->
+    <div id="resultModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()" style="cursor: pointer;">&times;</span>
+            <h2>Analysis Result:</h2>
+            <p id="reviewDisplay"></p>
+            <p id="sentimentDisplay"></p>
+            <div id="thumbsDisplay"></div> <!-- This will be replaced with the thumbs-up or thumbs-down animation -->
+        </div>
+    </div>
+
+    <script>
+        async function analyzeReview() {
+            const reviewText = document.getElementById('reviewText').value;
+
+            const response = await fetch('/analyze_sentiment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `text=${reviewText}`
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                console.log(result);
+                displayResult(result.text, result.sentiment);
+            } else {
+                console.error('Error analyzing sentiment:', response.statusText);
+            }
+        }
+
+        function displayResult(text, sentiment) {
+            document.getElementById('reviewDisplay').innerText = `Review: ${text}`;
+            document.getElementById('sentimentDisplay').innerText = `Sentiment: ${sentiment}`;
+            
+            // Display thumbs up or thumbs down animation based on sentiment
+            if (sentiment === 'positive') {
+                document.getElementById('thumbsDisplay').innerHTML = `
+                    <div class="center">
+                        <a href="#" class="thumb fa fa-thumbs-up"></a>
+                        <div class="circle-wrap">
+                            <div class="circle-lg"></div>
+                        </div>
+                        <div class="dots-wrap">
+                            <div class="dot dot--t"></div>
+                            <div class="dot dot--tr"></div>
+                            <div class="dot dot--br"></div>
+                            <div class="dot dot--b"></div>
+                            <div class="dot dot--bl"></div>
+                            <div class="dot dot--tl"></div>
+                        </div>
+                    </div>
+                `;
+            } else if (sentiment === 'negative') {
+                document.getElementById('thumbsDisplay').innerHTML = `
+                    <div class="center">
+                        <a href="#" class="thumb fa fa-thumbs-down"></a>
+                        <div class="circle-wrap">
+                            <div class="circle-lg"></div>
+                        </div>
+                        <div class="dots-wrap">
+                            <div class="dot dot--t"></div>
+                            <div class="dot dot--tr"></div>
+                            <div class="dot dot--br"></div>
+                            <div class="dot dot--b"></div>
+                            <div class="dot dot--bl"></div>
+                            <div class="dot dot--tl"></div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('resultModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('resultModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
