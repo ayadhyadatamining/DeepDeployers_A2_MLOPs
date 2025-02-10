@@ -13,7 +13,18 @@ This project is a sentiment analysis system built using FastAPI, a fine-tuned BA
 Watch the project demonstration video here:  
 [![Project Demonstration](https://img.shields.io/badge/Project%20Demo-Click%20Here-blue?style=for-the-badge)](https://drive.google.com/file/d/13A20RC270TYE0mmHpBlIXURGJ_JmIYtH/view?usp=sharing)
 
+## 🐳 Docker Commands
 
+### 📥 Pull the Docker Container from Docker Hub  
+To download the pre-built Docker image, run:  
+```bash
+docker pull arup0070/deepdeployers_a2_mlops-web
+```
+## 🚀 Run the Docker Container
+To start the container and expose it on port 8000, use the command below:
+```
+docker run --name deepdeployers_a2_mlops-web -p 8000:8000 arup0070/deepdeployers_a2_mlops-web
+```
 ## 📂 Project Structure
 
 ```bash
