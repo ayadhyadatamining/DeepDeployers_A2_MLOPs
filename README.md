@@ -25,6 +25,14 @@ To start the container and expose it on port 8000, use the command below:
 ```
 docker run --name deepdeployers_a2_mlops-web -p 8000:8000 arup0070/deepdeployers_a2_mlops-web
 ```
+
+
+### **Access the application**:
+
+- API Docs: [http://localhost:8000/docs](http://localhost:8000/docs)
+- Web UI: [http://localhost:8000](http://localhost:8000)
+
+---
 ## 📂 Project Structure
 
 ```bash
@@ -79,28 +87,6 @@ uvicorn server:app --reload
 
 ---
 
-## 🐳 Docker Setup
-
-### 📌 Build & Run the Docker Container
-
-1. **Build the Docker image**:
-
-```bash
-docker build -t sentiment-analysis .
-```
-
-2. **Run the Docker container**:
-
-```bash
-docker run -p 8000:8000 sentiment-analysis
-```
-
-3. **Access the application**:
-
-- API Docs: [http://localhost:8000/docs](http://localhost:8000/docs)
-- Web UI: [http://localhost:8000](http://localhost:8000)
-
----
 
 ## 📊 Model Training & MLflow Tracking
 
