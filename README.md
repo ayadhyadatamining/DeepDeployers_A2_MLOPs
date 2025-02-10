@@ -20,7 +20,7 @@ To download the pre-built Docker image, run:
 ```bash
 docker pull arup0070/deepdeployers_a2_mlops-web
 ```
-## 🚀 Run the Docker Container
+### 🚀 Run the Docker Container
 To start the container and expose it on port 8000, use the command below:
 ```
 docker run --name deepdeployers_a2_mlops-web -p 8000:8000 arup0070/deepdeployers_a2_mlops-web
